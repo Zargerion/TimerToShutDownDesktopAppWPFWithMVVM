@@ -82,24 +82,30 @@ namespace TimerToShutDownDesktopApp
             timer_control = true;
             
 
-                string HHv = HH.Text;
-                string mmv = MM.Text;
-                string ssv = SS.Text;
-                if (HHv == "" || mmv == "" || ssv == "")
-                {
-                    HHv = "6";
-                    mmv = "6";
-                    ssv = "6";
-                    if (int.Parse(HHv) + int.Parse(mmv) + int.Parse(ssv) > 12 + 60 + 60)
-                    {
-                        HHv = "12";
-                        mmv = "60";
-                        ssv = "60";
-                    }
-                }
-                hours = int.Parse(HHv);
-                mins = int.Parse((mmv));
-                secs = int.Parse((ssv));
+            string HHv = HH.Text;
+            string mmv = MM.Text;
+            string ssv = SS.Text;
+            if (HHv == "")
+            {
+                HHv = "0";
+            }
+            if (mmv == "")
+            {
+                mmv = "0";
+            }
+            if (ssv == "")
+            {
+                ssv = "0";
+            }
+            if (int.Parse(HHv) + int.Parse(mmv) + int.Parse(ssv) > 12 + 60 + 60)
+            {
+                HHv = "12";
+                mmv = "60";
+                ssv = "60";
+            }
+            hours = int.Parse(HHv);
+            mins = int.Parse((mmv));
+            secs = int.Parse((ssv));
 
                 
   
