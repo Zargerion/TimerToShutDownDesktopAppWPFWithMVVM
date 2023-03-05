@@ -85,6 +85,12 @@ namespace TimerToShutDownDesktopApp
             string HHv = HH.Text;
             string mmv = MM.Text;
             string ssv = SS.Text;
+            if (HHv == "" && mmv == "" && ssv == "")
+            {
+                HHv = "1";
+                mmv = "0";
+                ssv = "0";
+            }
             if (HHv == "")
             {
                 HHv = "0";
