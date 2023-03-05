@@ -97,11 +97,11 @@ namespace TimerToShutDownDesktopApp
             {
                 ssv = "0";
             }
-            if (int.Parse(HHv) + int.Parse(mmv) + int.Parse(ssv) > 12 + 60 + 60)
+            if (int.Parse(HHv) + int.Parse(mmv) + int.Parse(ssv) > 23 + 59 + 59)
             {
-                HHv = "12";
-                mmv = "60";
-                ssv = "60";
+                HHv = "23";
+                mmv = "59";
+                ssv = "59";
             }
             hours = int.Parse(HHv);
             mins = int.Parse((mmv));
